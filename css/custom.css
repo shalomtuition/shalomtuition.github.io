@@ -22,5 +22,6 @@ u.dotted { border-bottom: 1px dashed #999; text-decoration: none; }
 .regular-font {font-size: 30px !important;}
 .dotted {border-bottom: 1px dashed #999; text-decoration: none;}
 #bring-a-friend{font-size: 20px;}
-#square{width:35%;}
+#square{width:50%;}
 #align-left {text-align: left;}
+#dotted{border: dotted #d1d1d1;width:50%;}
