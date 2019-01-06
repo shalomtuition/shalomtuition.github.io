@@ -25,3 +25,12 @@ u.dotted { border-bottom: 1px dashed #999; text-decoration: none; }
 #square{width:65%;}
 #align-left {text-align: left;}
 #dotted{border: dotted #d1d1d1;width:65%;}
+
+header #header-banner {
+  background: #2d313c;
+  padding: 8px;
+  text-align: center
+}
+a {
+  color:white;
+}
