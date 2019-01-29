@@ -6,7 +6,7 @@ div#frill h3 em { font-style: italic; font-weight: bolder; }
 div#frill ul { display: block; list-style-type: disc; list-style-image: none; line-height: normal; margin: 0; padding: 0; padding-left: 2em; }
 div#frill ul li { display: list-item; }
 ul.styleless { list-style-type: none; margin-left:-25px;}
-.bg-blue { background:#446CB3; }
+.bg-blue { background:#446CB3; color: #f2f2f2;}
 .bg-whatsapp { background-color: #4FCE5D; }
 .color-red { color:#CF000F; }
 .color-blue { color: #446CB3; }
@@ -16,7 +16,7 @@ ul.styleless { list-style-type: none; margin-left:-25px;}
 u.dotted { border-bottom: 1px dashed #999; text-decoration: none; }
 .normal-font {font-size: 16px;}
 .biggest-font {font-size: 60px !important;}
-.biggesttt-font {font-size: 65px !important;}
+.biggesttt-font {font-size: 70px !important; }
 .big-font {font-size: 56px !important;}
 .medium-font {font-size: 36px !important;}
 .regular-font {font-size: 30px !important;}
@@ -26,11 +26,19 @@ u.dotted { border-bottom: 1px dashed #999; text-decoration: none; }
 #align-left {text-align: left;}
 #dotted{border: dotted #d1d1d1;width:65%;}
 
-header #header-banner {
+#header-banner {
   background: #2d313c;
   padding: 8px;
   text-align: center
 }
 a #whatsapp {
   color:white;
+}
+
+header.bg-blue .navbar-nav a.nav-link {
+  color: #dcdcdc;
+}
+
+header.bg-blue .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
