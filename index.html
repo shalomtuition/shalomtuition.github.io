@@ -3,13 +3,35 @@ layout: index
 ---
 <section class="fdb-block pt-0 fp-active" data-block-type="pricings" data-id="6" draggable="true">
     <div class="col mt-4 mt-md-0 text-center">
+      <div id="vueapp">
+        <p>{{message}}</p>
+        <swiper ref="awesomeSwiperA" :options="swiperOptionA" 
+        @set-translate="onSetTranslate">
+          <!-- slides -->
+          <swiper-slide>
+            <h1 class="biggesttt-font text-center">
+              Score Better in Math & Science!
+            </h1>
+          </swiper-slide>
+          <swiper-slide>
+            <h1 class="biggesttt-font text-center">
+            <h2 class="text-center color-dark-black regular-font">
+              Every child can achieve & prosper.</h2>
+            </h1>
+          </swiper-slide>
 
-      <h1 class="biggesttt-font text-center">
-        Score Better in Math & Science!
-      </h1>
-      <h2 class="text-center color-dark-black regular-font">
-        Every child can achieve & prosper.</h2>
+          <swiper-slide>Math & Science are easy.</swiper-slide>
 
+          <swiper-slide>Homework help is always nearby</swiper-slide>
+
+          <!-- Optional controls -->
+          <div class="swiper-pagination"  slot="pagination"></div>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+    </div>
+
+    <div>
       <a class="btn bg-whatsapp" 
       href="https://api.whatsapp.com/send?phone=+6583338951&text=hi.">
       Book a tuition with Shalom Tuition <i class="fab fa-whatsapp"></i></a>
@@ -53,89 +75,91 @@ layout: index
   </div>
     
   <br>
+  <div class="container">
   <div class="row text-center">
-    <div class="container">
-      <table class="table table-striped table-bordered">
-          <thead class="table-success">
-              <tr>
-                <th colspan="4"><h3><b>One-to-One Tuition</b></h3> <br>
-                Please call/sms 8333-8951 for a time slot.</th>
-              </tr>
-            </thead>
-        <thead>
-          <tr>
-            <th scope="col">Pri 4</th>
-            <th scope="col">Pri 5</th>
-            <th scope="col">PSLE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td scope="row">$45/hour</td>
-            <td scope="row">$50/hour</td>
-            <td scope="row">$50/hour</td>
-          </tr>
-        </tbody>
+      <div class="col">
+        <table class="table table-striped table-bordered">
+            <thead class="table-success">
+                <tr>
+                  <th colspan="4"><h3><b>One-to-One Tuition</b></h3> <br>
+                  Please call/sms 8333-8951 for a time slot.</th>
+                </tr>
+              </thead>
+          <thead>
+            <tr>
+              <th scope="col">Pri 4</th>
+              <th scope="col">Pri 5</th>
+              <th scope="col">PSLE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">$45/hour</td>
+              <td scope="row">$50/hour</td>
+              <td scope="row">$50/hour</td>
+            </tr>
+          </tbody>
 
-        <thead>
-          <tr>
-            <th scope="col">Sec 1/2</th>
-            <th scope="col">Sec 3</th>
-            <th scope="col">O/N level</th>
-          </tr>
-        </thead>
+          <thead>
+            <tr>
+              <th scope="col">Sec 1/2</th>
+              <th scope="col">Sec 3</th>
+              <th scope="col">O/N level</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr>
-              <td scope="row">$55/hour</td>
-              <td scope="row">$60/hour</td>
-              <td scope="row">$60/hour</td>
-          </tr>
-        </tbody>
-      </table>
+          <tbody>
+            <tr>
+                <td scope="row">$55/hour</td>
+                <td scope="row">$60/hour</td>
+                <td scope="row">$60/hour</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <hr>
+      <div class="col">
+        <table class="table table-striped table-bordered">
+            <thead class="table-primary">
+                <tr>
+                  <th colspan="4"><h3><b>Weekly Group Tuition (5-6 per group)</b></h3><br>
+                      1.5 hour lesson. Price will be adjusted for 5th week. Please call/sms 8333-8951.
+                  </th>
+                </tr>
+              </thead>
+          <thead>
+            <tr>
+              <th scope="col">Pri 4</th>
+              <th scope="col">Pri 5</th>
+              <th scope="col">PSLE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">$130/month</td>
+              <td scope="row">$150/month</td>
+              <td scope="row">$150/month</td>
+            </tr>
+          </tbody>
 
-      <table class="table table-striped table-bordered">
-          <thead class="table-primary">
-              <tr>
-                <th colspan="4"><h3><b>Weekly Group Tuition (5-6 per group)</b></h3><br>
-                    1.5 hour lesson. Price will be adjusted for 5th week. Please call/sms 8333-8951.
-                </th>
-              </tr>
-            </thead>
-        <thead>
-          <tr>
-            <th scope="col">Pri 4</th>
-            <th scope="col">Pri 5</th>
-            <th scope="col">PSLE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td scope="row">$130/month</td>
-            <td scope="row">$150/month</td>
-            <td scope="row">$150/month</td>
-          </tr>
-        </tbody>
+          <thead>
+            <tr>
+              <th scope="col">Sec 1/2</th>
+              <th scope="col">Sec 3</th>
+              <th scope="col">O/N level</th>
+            </tr>
+          </thead>
 
-        <thead>
-          <tr>
-            <th scope="col">Sec 1/2</th>
-            <th scope="col">Sec 3</th>
-            <th scope="col">O/N level</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td scope="row">$160/month</td>
-            <td scope="row">$180/month</td>
-            <td scope="row">$200/month</td>
-          </tr>
-        </tbody>
-      </table>
-
+          <tbody>
+            <tr>
+              <td scope="row">$160/month</td>
+              <td scope="row">$180/month</td>
+              <td scope="row">$200/month</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>For primary students, each fee includes Math and Science. <br>For upper secondary students, the student will be divided into individual A-math, E-math, Physics, Chemistry classes.
         Stronger students will be group together. Weaker students will receive attention and may stay back for extra practice. 
@@ -183,9 +207,6 @@ layout: index
     </div>
   </div>
 
-
-
-  <hr>
   <div class="row text-center">
     <!-- <div class="container">
       <b>Please note</b> that Shalom Tuition group <u>does not accept</u>
