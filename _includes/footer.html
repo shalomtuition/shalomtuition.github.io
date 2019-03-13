@@ -39,8 +39,29 @@
   <script type="text/javascript">try{ clicky.init(101150804); }catch(e){}</script>
   <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101150804ns.gif" /></p></noscript>
 
+  <style lang="scss" scoped>
+  .swiper-slide {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    background-color: #eee;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
   <script>
     Vue.use(VueAwesomeSwiper)
+
     new Vue({
       el: '#vueapp',
       components: {
@@ -48,24 +69,25 @@
           LocalSlide: VueAwesomeSwiper.swiperSlide,
       },
       data: {
+        banners: [ '../images/bachelor.jpeg'],
         swiperOptionA: {
-            autoplay: true,
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true
-            },
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev'
-            }
+          autoplay: true,
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
         },
         swiperOptionB: {
-            pagination: {
-              el: '.swiper-pagination',
-              dynamicBullets: true
-            }
+          pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true
+          }
         }
       },
       computed: {
