@@ -26,11 +26,6 @@ u.dotted { border-bottom: 1px dashed #999; text-decoration: none; }
 #align-left {text-align: left;}
 #dotted{border: dotted #d1d1d1;width:65%;}
 
-#header-banner {
-  background: #2d313c;
-  padding: 8px;
-  text-align: center;
-}
 
 #header-banner a {
   color: white;
@@ -48,10 +43,7 @@ header.bg-blue .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.swiper-container {
-  height: 450px;
-  width: 100%;
-}
+
 
 footer.fdb-block.footer-small {
   background-color: #2d313c;
@@ -66,3 +58,35 @@ footer.fdb-block.footer-small p {
   color: #eee;
 }
 
+@media (min-device-width: 481px) {
+  .swiper-container {
+    height: 400px;
+    width: 100%;
+  }
+
+  #header-banner {
+    background: #2d313c;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+}
+
+@media screen and (max-device-width: 480px) {
+  /* iphone-portrait */
+  @media screen and (max-width: 400px) { 
+    .swiper-container {
+      height: 300px;
+      width: 100%;
+    }
+  }
+
+  #header-banner {
+    background: #2d313c;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+}
