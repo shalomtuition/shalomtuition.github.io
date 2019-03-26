@@ -1,41 +1,39 @@
 ---
 layout: index
 ---
+
+
 <section class="fdb-block pt-0 fp-active" data-block-type="pricings" data-id="6" draggable="true">
+    <div id="vueapp">
+      <swiper class="swiper-no-swiping" ref="awesomeSwiperA" :options="swiperOptionA" 
+      @set-translate="onSetTranslate">    
+        <swiper-slide>
+          <h1 class="biggesttt-font text-center">
+            Score Better in Math & Science!
+          </h1>
+        </swiper-slide>
+        <swiper-slide>
+          <h1 class="biggesttt-font text-center">
+          <h2 class="text-center color-dark-black regular-font">
+            Every child can achieve & prosper.</h2>
+          </h1>
+        </swiper-slide>
+      
+        <swiper-slide>Math & Science are easy.</swiper-slide>
+      
+        <swiper-slide>Homework help is always nearby</swiper-slide>
+      
+        <div class="swiper-slide" v-for="banner in banners">
+          <img class="img-fluid" :src="banner">
+        </div>
+        
+        <!-- Optional controls -->
+        <div class="swiper-pagination"  slot="pagination"></div>
+        <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div> -->
+      </swiper>      
+    </div>
     <div class="col mt-4 mt-md-0 text-center">
-      <div id="vueapp">
-        <p>{{message}}</p>
-
-        <swiper class="swiper-no-swiping" ref="awesomeSwiperA" :options="swiperOptionA" 
-        @set-translate="onSetTranslate">    
-          <swiper-slide>
-            <h1 class="biggesttt-font text-center">
-              Score Better in Math & Science!
-            </h1>
-          </swiper-slide>
-          <swiper-slide>
-            <h1 class="biggesttt-font text-center">
-            <h2 class="text-center color-dark-black regular-font">
-              Every child can achieve & prosper.</h2>
-            </h1>
-          </swiper-slide>
-
-          <swiper-slide>Math & Science are easy.</swiper-slide>
-
-          <swiper-slide>Homework help is always nearby</swiper-slide>
-
-          <div class="swiper-slide" v-for="banner in banners">
-            <img class="img-fluid" :src="banner">
-          </div>
-          
-          <!-- Optional controls -->
-          <div class="swiper-pagination"  slot="pagination"></div>
-          <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div> -->
-        </swiper>
-
-      </div>
-
     <div>
       <a class="btn bg-whatsapp" 
       href="https://api.whatsapp.com/send?phone=+6583338951&text=hi.">
