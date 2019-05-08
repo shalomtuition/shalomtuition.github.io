@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <img src="./images/831.gif" alt="">
+    <a href="https://shalomtuition.herokuapp.com">Click here if this does not redirect.</a>
+  </body>
+
+<script>
+  function ping(url) {
+    ping = new XMLHttpRequest();    
+    ping.onreadystatechange = function(){
+      if(ping.readyState == 4){
+          if(ping.status == 200){
+              result = ping.getAllResponseHeaders();
+              // document.body.innerHTML += "</br>" + result + "</br>";
+          }
+      }
+    }
+    ping.open("GET", url, true);    
+    ping.send();
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function demo() {
+    var isValid = ping("https://shalomtuition.herokuapp.com");
+
+    console.log('Taking a break...');
+    await sleep(3000);
+    console.log('Two seconds later');
+    redirect();
+  }
+
+  function redirect(){
+      window.location = "https://shalomtuition.herokuapp.com"; 
+  }
+
+  demo()
+  </script>
+
+</html>
