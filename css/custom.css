@@ -90,22 +90,24 @@ footer.fdb-block.footer-small p {
     text-align: center;
   }
   
+  .big-marketing-font {font-size: 230% !important; }
 }
 
-@media screen and (max-device-width: 480px) {
   /* iphone-portrait */
-  @media screen and (max-width: 400px) { 
+  @media screen and (max-width: 480px) { 
     .swiper-container {
       height: 300px;
       width: 100%;
     }
+
+    #header-banner {
+      background: #2d313c;
+      padding: 5px;
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .big-marketing-font {font-size: 110% !important; }
   }
 
-  #header-banner {
-    background: #2d313c;
-    padding: 5px;
-    font-size: 14px;
-    text-align: center;
-  }
-  
-}
+
