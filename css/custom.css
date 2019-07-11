@@ -112,4 +112,8 @@ footer.fdb-block.footer-small p {
     .big-marketing-font {font-size: 110% !important; }
   }
 
+  .thick_header {
+    padding: 10px;
+    border: 1px solid black;
+  }
 
