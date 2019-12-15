@@ -117,3 +117,8 @@ footer.fdb-block.footer-small p {
     border: 1px solid black;
   }
 
+footer a.nav-link{
+  background:#20232b;
+  margin: 3px 3px 3px 3px;
+  border-radius: 7px;
+}
