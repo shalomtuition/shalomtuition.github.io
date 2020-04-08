@@ -13,12 +13,31 @@
   
 <div id="app">
   <!-- default props -->
+  <h2>Book</h2>
   <vue-slider
     ref="slider"
     v-model="value"
     v-bind="options"
   ></vue-slider>
   <h1>{{ value }}</h1>
+
+  <h2>Chapter</h2>
+    <vue-slider
+    ref="slider"
+    v-model="value"
+    v-bind="options"
+  ></vue-slider>
+  <h1>{{ value }}</h1>
+
+  <h2>Verse</h2>
+  <vue-slider
+    ref="slider"
+    v-model="value"
+    v-bind="options"
+  ></vue-slider>
+  <h1>{{ value }}</h1>
+
+  <a target="_new" href="https://nightcatsama.github.io/vue-slider-component/#/">Vue slider component</a>
 </div>
 </body>
 
@@ -30,15 +49,15 @@
   el: '#app',
   data () {
     return {
-    	value: 0,
+    	value: "matt",
       options: {
         dotSize: 40,
         width: 'auto',
         height: 10,
         contained: false,
         direction: 'ltr',
-        min: 0,
-        max: 100,
+        min: null,
+        max: null,
         interval: 10,
         disabled: false,
         clickable: true,
@@ -56,8 +75,11 @@
         minRange: void 0,
         maxRange: void 0,
         order: true,
-        data: null,
-        marks: [10,20,30,40,50,60,70,80,90,100],
+        data: ["matt", "mark","luke", "john", "acts", "rom", "1 cor", "2 cor", "gal","eph", "phil", "col", "1 thess", "2 thess","1 tim", "2 tim", "titus", "philemon", "heb", "james", "1 peter", "2 peter", "1 john", "2 john", "3 john", "jude", "rev"],
+        marks: ["matt", "mark","luke", "john", "acts", "rom", "1 cor", "2 cor", "gal","eph", "phil", "col", "1 thess", "2 thess","1 tim", "2 tim", "titus", "philemon", "heb", "james", "1 peter", "2 peter", "1 john", "2 john", "3 john", "jude", "rev"],
+//         marks: ["gen", "exo", "lev", "num", "deut", "josh", "judg", "ruth", "1 sam", "2 sam", "1 kings", "2 kings",
+// "1 chron", "2 chron", "ezra", "neh", "est", "job", "psa", "prov", "eccl", "songs", "isa", "jer",
+// "lam", "ezel", "dan", "hos", "joel", "amos", "obad", "jonah", "micah", "nahum", "hab", "zeph", "hag", "zech", "mal"],
         dotOptions: void 0,
         process: true,
         dotStyle: void 0,
