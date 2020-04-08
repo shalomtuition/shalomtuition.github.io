@@ -1,0 +1,174 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    #app {
+      font-size: 28px;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.autocomplete {
+  position: relative;
+  width: 200px;
+}
+
+.autocomplete-results {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #eeeeee;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+.autocomplete-result {
+  list-style: none;
+  text-align: left;
+  padding: 4px 2px;
+  cursor: pointer;
+}
+
+.autocomplete-result.is-active,
+.autocomplete-result:hover {
+  background-color: #4aae9b;
+  color: white;
+}
+  </style>
+</head>
+
+<body>
+  <!-- https://icons8.com/icons/set/upwards -->
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAxklEQVRIie3TMWoCURCH8R8YCHYJKfcEWtgK4hXS5QDb5QApvIInsNPezivExgN4gi1SiXZCICGmGdEVG92n1X4wzfsPH2/eY6ipuTfPUTchwzIqSy1vocAu6gudVPIe1iGeR+3irFdV/optCGdo4hHTOPvG27XyHD8hmuDhKGtgFNkv3i+VD/AXgmGCvko3yx0mHStPWqLK2577qxJP+IyGDfoXyPd0sQrHAi/HYR5BgfYV8j1th33JT8MPaTY0C1dNTSL+AdfJNZ55t61GAAAAAElFTkSuQmCC"/>  
+  <!-- this is the downward carrot -->
+  <span data-icon="up" class="_2pyvj"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="currentColor" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg></span>
+  
+  <div id="app">
+    <autocomplete :items='["genesis", "exodus", "leviticus", "numbers", "deuteronomy", "joshua", "judges", "ruth", "1 samuel", "2 samuel", "1 kings", "2 kings",
+    "1 chronicles", "2 chronicles", "ezra", "nehemiah", "esther", "job", "psalm", "proverbs", "ecclesiastes", "song of songs", "isaiah", "jeremiah",
+    "lamentations", "ezekiel", "daniel", "hosea", "joel", "amos", "obadiah", "jonah", "micah", "nahum", "habakkuk", "zephaniah", "haggai", "zechariah", "malachi","matthew", "mark","luke", "john", "acts", "romans", "1 corinthians", "2 corinthians", "galatians","ephesians", "philippians", "colossians", "1 thessalonians", "2 thessalonians","1 timothy", "2 timothy", "titus", "philemon", "hebrews", "james", "1 peter", "2 peter", "1 john", "2 john", "3 john", "jude", "revelation"]' />
+  </div>    
+
+  <script type="text/x-template" id="autocomplete">
+    <div class="autocomplete">
+      <input type="text" @input="onChange" v-model="search" @keyup.down="onArrowDown" @keyup.up="onArrowUp" @keyup.enter="onEnter" />
+      <ul id="autocomplete-results" v-show="isOpen" class="autocomplete-results">
+        <li class="loading" v-if="isLoading">
+          Loading results...
+        </li>
+        <li v-else v-for="(result, i) in results" :key="i" @click="setResult(result)" class="autocomplete-result" :class="{ 'is-active': i === arrowCounter }">
+          {{ result }}
+        </li>
+      </ul>
+  
+    </div>
+  </script>
+
+  <script>
+    const Autocomplete = {
+  name: "autocomplete",
+  template: "#autocomplete",
+  props: {
+    items: {
+      type: Array,
+      required: false,
+      default: () => []
+    },
+    isAsync: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
+
+  data() {
+    return {
+      isOpen: false,
+      results: [],
+      search: "",
+      isLoading: false,
+      arrowCounter: 0
+    };
+  },
+
+  methods: {
+    onChange() {
+      // Let's warn the parent that a change was made
+      this.$emit("input", this.search);
+
+      // Is the data given by an outside ajax request?
+      if (this.isAsync) {
+        this.isLoading = true;
+      } else {
+        // Let's search our flat array
+        this.filterResults();
+        this.isOpen = true;
+      }
+    },
+
+    filterResults() {
+      // first uncapitalize all the things
+      this.results = this.items.filter(item => {
+        return item.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
+      });
+    },
+    setResult(result) {
+      this.search = result;
+      this.isOpen = false;
+    },
+    onArrowDown(evt) {
+      if (this.arrowCounter < this.results.length) {
+        this.arrowCounter = this.arrowCounter + 1;
+      }
+    },
+    onArrowUp() {
+      if (this.arrowCounter > 0) {
+        this.arrowCounter = this.arrowCounter - 1;
+      }
+    },
+    onEnter() {
+      this.search = this.results[this.arrowCounter];
+      this.isOpen = false;
+      this.arrowCounter = -1;
+    },
+    handleClickOutside(evt) {
+      if (!this.$el.contains(evt.target)) {
+        this.isOpen = false;
+        this.arrowCounter = -1;
+      }
+    }
+  },
+  watch: {
+    items: function(val, oldValue) {
+      // actually compare them
+      if (val.length !== oldValue.length) {
+        this.results = val;
+        this.isLoading = false;
+      }
+    }
+  },
+  mounted() {
+    document.addEventListener("click", this.handleClickOutside);
+  },
+  destroyed() {
+    document.removeEventListener("click", this.handleClickOutside);
+  }
+};
+
+new Vue({
+  el: "#app",
+  name: "app",
+  components: {
+    autocomplete: Autocomplete
+  }
+});
+
+  </script>
+
+</body>
+
+</html>

@@ -25,7 +25,7 @@ u.dotted { border-bottom: 1px dashed #999; text-decoration: none; }
 #square{width:65%;}
 #align-left {text-align: left;}
 #dotted{border: dotted #d1d1d1;width:65%;}
-
+a.underline {text-decoration: underline;}
 .white-black {
   color: white;
   background-color: #2d313c !important;
