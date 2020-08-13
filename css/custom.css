@@ -46,6 +46,11 @@ a.underline {text-decoration: underline;}
   background-color: #ff7979 !important;
 }
 
+.white-blue {
+  color: white;
+  background-color: #3f5496 !important;
+}
+
 #header-banner a {
   color: white;
 }
@@ -92,7 +97,7 @@ footer.fdb-block.footer-small p {
     text-align: center;
   }
   
-  .big-marketing-font {font-size: 230% !important; }
+  .big-marketing-font {font-size: 180% !important; }
 }
 
   /* iphone-portrait */
