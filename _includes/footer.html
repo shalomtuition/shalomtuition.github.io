@@ -10,8 +10,8 @@
             <a class="nav-link active" href="/">Home</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link active" href="/resources">Videos</a>
-            </li>
+            <a class="nav-link active" href="/resources">Videos</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
@@ -24,110 +24,125 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1IsQrxNpirZOpGYRDu7u4AaJntYzSp0S_TjOyoLotJmM/edit#gid=0">
-              Admin Log in</a>
+            <a
+              class="nav-link"
+              href="https://docs.google.com/spreadsheets/d/1IsQrxNpirZOpGYRDu7u4AaJntYzSp0S_TjOyoLotJmM/edit#gid=0"
+            >
+              Admin Log in</a
+            >
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="http://AAAresult.com">
-              Assessment Books</a>
+              Assessment Books</a
+            >
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/sponsor.html">
-              Sponsor a child</a>
+            <a class="nav-link" href="/sponsor.html"> Sponsor a child</a>
           </li>
 
           <li class="nav-item">
-              <a class="nav-link" 
-              href="https://calendar.google.com/calendar/r/month/2020/3/1?cid=bDNoOTA2ZmJuam5scm5ta2JmY2U3ZjNqa2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
-              Admin Calendar</a>
-            </li>
+            <a
+              class="nav-link"
+              href="https://calendar.google.com/calendar/r/month/2020/3/1?cid=bDNoOTA2ZmJuam5scm5ta2JmY2U3ZjNqa2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+            >
+              Admin Calendar</a
+            >
+          </li>
 
           <li class="nav-item">
-            <a class="nav-link" 
-            href="/links">
-            Links</a>
+            <a class="nav-link" href="/links"> Links</a>
           </li>
         </ul>
-        <br>
+        <br />
         <p class="justify-content-center justify-content-md-start">
-          © Shalom Family Tuition 2020. UEN 53392257K. <br> Empowering Lives. Channeling Learning. <br><br>
-          Mr. Bryan Lim is a registered member of the Association of Tutors (Singapore). He graduated with a Bachelor's and Master's degree from National University of Singapore (NUS)
-          <br>
+          © Shalom Family Tuition 2020. UEN 53392257K. <br />
+          Enabling Learning. Empowering Lives. <br /><br />
+          Mr. Bryan Lim is a registered member of the Association of Tutors
+          (Singapore). He graduated with a Bachelor's and Master's degree from
+          National University of Singapore (NUS)
+          <br />
           <a class="underline" href="/mrbryan">View Profile</a>
         </p>
       </div>
 
       <div class="col mt-4 mt-md-0 text-center text-md-right">
         <!-- <a class="btn bg-whatsapp" href="https://api.whatsapp.com/send?phone=+6588084071&text=Dear Tutor, I am interested in engaging you for tuition ($20 off).">Message Tutor on Whatsapp <i class="fab fa-whatsapp"></i></a> -->
-        <p class="color-dark-black">Or sms at <u class="dotted">+65 8808-4071</u></p>
-        <img class="bordered" src="./images/shalomtuition_qr.png" alt="shalomtuition.com">
+        <p class="color-dark-black">
+          Or sms at <u class="dotted">+65 8808-4071</u>
+        </p>
+        <img
+          class="bordered"
+          src="./images/shalomtuition_qr.png"
+          alt="shalomtuition.com"
+        />
       </div>
     </div>
   </div>
 
-  <a href="https://api.whatsapp.com/send?phone=+6588084071&text=Dear%20Tutor," class="float" target="_blank">
-  <i class="fa fa-whatsapp my-float"></i>
+  <a
+    href="https://api.whatsapp.com/send?phone=+6588084071&text=Dear%20Tutor,"
+    class="float"
+    target="_blank"
+  >
+    <i class="fa fa-whatsapp my-float"></i>
   </a>
-
 </footer>
-  
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 
-  <script>
-    Vue.use(VueAwesomeSwiper)
+<script>
+  Vue.use(VueAwesomeSwiper);
 
-    new Vue({
-      el: '#vueapp',
-      components: {
-          LocalSwiper: VueAwesomeSwiper.swiper,
-          LocalSlide: VueAwesomeSwiper.swiperSlide,
-      },
-      data: {
-        banners: [ 'images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg' ],
-        swiperOptionA: {
-          loop: true,
-        	noSwiping: true,
-          allowSwipeToNext: false, 
-          allowSwipeToPrev: false,
-          autoplay: true,
-          slidesPerView: 1,
-          spaceBetween: 40,
-          autoplay: {
-            delay: 4000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          }
+  new Vue({
+    el: "#vueapp",
+    components: {
+      LocalSwiper: VueAwesomeSwiper.swiper,
+      LocalSlide: VueAwesomeSwiper.swiperSlide,
+    },
+    data: {
+      banners: ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"],
+      swiperOptionA: {
+        loop: true,
+        noSwiping: true,
+        allowSwipeToNext: false,
+        allowSwipeToPrev: false,
+        autoplay: true,
+        slidesPerView: 1,
+        spaceBetween: 40,
+        autoplay: {
+          delay: 4000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
       },
-      computed: {
-          swiperA() {
-            return this.$refs.awesomeSwiperA.swiper
-          },
-          swiperB() {
-            return this.$refs.awesomeSwiperB.swiper
-          }
-        },
-        methods: {
-          onSetTranslate() {
-            console.log('onSetTranslate')
-          }
-        },
-        mounted() {
-          // console.log('this is swiper A instance object', this.swiperA, 'B instance', this.swiperB)
-        }
-      })
-  
-    var clipboard = new ClipboardJS('.copier');
+    },
+    computed: {
+      swiperA() {
+        return this.$refs.awesomeSwiperA.swiper;
+      },
+      swiperB() {
+        return this.$refs.awesomeSwiperB.swiper;
+      },
+    },
+    methods: {
+      onSetTranslate() {
+        console.log("onSetTranslate");
+      },
+    },
+    mounted() {
+      // console.log('this is swiper A instance object', this.swiperA, 'B instance', this.swiperB)
+    },
+  });
 
-  </script>
+  var clipboard = new ClipboardJS(".copier");
+</script>
 
 <style lang="scss" scoped>
   .swiper-slide {
@@ -145,7 +160,7 @@
     -ms-flex-align: center;
     align-items: center;
 
-    background-position: center; 
+    background-position: center;
     background-size: cover;
   }
 </style>

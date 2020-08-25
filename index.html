@@ -2,16 +2,24 @@
 layout: index
 ---
 
-<section class="fdb-block pt-0 fp-active" data-block-type="pricings" data-id="6" draggable="true">
+<section
+  class="fdb-block pt-0 fp-active"
+  data-block-type="pricings"
+  data-id="6"
+  draggable="true"
+>
   <div id="vueapp">
-    <swiper class="swiper-no-swiping" ref="awesomeSwiperA" :options="swiperOptionA" 
-    @set-translate="onSetTranslate">    
-
-    <swiper-slide class="white-blue">
-      <h1 class="big-marketing-font text-center">
-        Empowering Lives ⚡️ Channeling Learning📚
-      </h1>
-    </swiper-slide>
+    <swiper
+      class="swiper-no-swiping"
+      ref="awesomeSwiperA"
+      :options="swiperOptionA"
+      @set-translate="onSetTranslate"
+    >
+      <swiper-slide class="white-blue">
+        <h1 class="big-marketing-font text-center">
+          Enabling Learning📚 Empowering Lives ⚡️
+        </h1>
+      </swiper-slide>
 
       <swiper-slide class="white-black">
         <h1 class="big-marketing-font text-center">
@@ -23,30 +31,33 @@ layout: index
           Every child 🧒🏻 can achieve & prosper.
         </h1>
       </swiper-slide>
-    
+
       <swiper-slide class="white-green">
         <h1 class="big-marketing-font text-center">
           📈 Math & 🔭 Science are easy.
         </h1>
       </swiper-slide>
-    
+
       <swiper-slide class="white-red">
         <h1 class="big-marketing-font text-center">
-          📖 Homework help is always nearby 
+          📖 Homework help is always nearby
         </h1>
       </swiper-slide>
-      
+
       <!-- Optional controls -->
-      <div class="swiper-pagination"  slot="pagination"></div>
-    </swiper>      
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
   </div>
 
   <div class="container">
-    <br>
+    <br />
     <div class="col mt-4 mt-md-0 text-center">
       <h2>
-        <i>And the child grew and became strong, filled with wisdom, and the favor of God was upon him.</i>
-          - Luke 2:40
+        <i
+          >And the child grew and became strong, filled with wisdom, and the
+          favor of God was upon him.</i
+        >
+        - Luke 2:40
       </h2>
 
       <!-- <h2>
@@ -54,7 +65,7 @@ layout: index
           - Proverb 22:6
       </h2> -->
     </div>
-    <br>
+    <br />
 
     <h2 class="text-center thick_header">
       Fee and pricing
@@ -62,106 +73,111 @@ layout: index
   </div>
   <div class="container">
     <div class="row text-center">
+      <div class="col">
+        <table class="table table-striped table-bordered">
+          <thead class="table-success">
+            <tr>
+              <th colspan="4">
+                <h3><b>One-to-One Tuition</b></h3>
+                <br />
+                Please call/sms 8808-4071 for a time slot.
+              </th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th scope="col">Pri 4</th>
+              <th scope="col">Pri 5</th>
+              <th scope="col">PSLE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">$45/hour</td>
+              <td scope="row">$50/hour</td>
+              <td scope="row">$50/hour</td>
+            </tr>
+          </tbody>
 
-        <div class="col">
-          <table class="table table-striped table-bordered">
-              <thead class="table-success">
-                  <tr>
-                    <th colspan="4"><h3><b>One-to-One Tuition</b></h3> <br>
-                    Please call/sms 8808-4071 for a time slot.</th>
-                  </tr>
-                </thead>
-            <thead>
-              <tr>
-                <th scope="col">Pri 4</th>
-                <th scope="col">Pri 5</th>
-                <th scope="col">PSLE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row">$45/hour</td>
-                <td scope="row">$50/hour</td>
-                <td scope="row">$50/hour</td>
-              </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th scope="col">Sec 1/2</th>
+              <th scope="col">Sec 3</th>
+              <th scope="col">O/N level</th>
+            </tr>
+          </thead>
 
-            <thead>
-              <tr>
-                <th scope="col">Sec 1/2</th>
-                <th scope="col">Sec 3</th>
-                <th scope="col">O/N level</th>
-              </tr>
-            </thead>
+          <tbody>
+            <tr>
+              <td scope="row">$55/hour</td>
+              <td scope="row">$60/hour</td>
+              <td scope="row">$60/hour</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-            <tbody>
-              <tr>
-                  <td scope="row">$55/hour</td>
-                  <td scope="row">$60/hour</td>
-                  <td scope="row">$60/hour</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="col">
+        <table class="table table-striped table-bordered">
+          <thead class="bg-dark">
+            <tr>
+              <th colspan="4">
+                <h3><b>Weekly Group Tuition</b></h3>
+                <br />
+                (5-6 per group) Call/sms 8808-4071.
+              </th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th scope="col">Pri 4</th>
+              <th scope="col">Pri 5</th>
+              <th scope="col">PSLE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">$130/mth</td>
+              <td scope="row">$150/mth</td>
+              <td scope="row">$150/mth</td>
+            </tr>
+          </tbody>
 
-        <div class="col">
+          <thead>
+            <tr>
+              <th scope="col">Sec 1/2</th>
+              <th scope="col">Sec 3</th>
+              <th scope="col">O/N level</th>
+            </tr>
+          </thead>
 
-            <table class="table table-striped table-bordered">
-                <thead class="bg-dark">
-                    <tr>
-                      <th colspan="4"><h3><b>Weekly Group Tuition</b></h3> <br>
-                      (5-6 per group) Call/sms 8808-4071.</th>
-                    </tr>
-                  </thead>
-              <thead>
-                <tr>
-                  <th scope="col">Pri 4</th>
-                  <th scope="col">Pri 5</th>
-                  <th scope="col">PSLE</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">$130/mth</td>
-                  <td scope="row">$150/mth</td>
-                  <td scope="row">$150/mth</td>
-                </tr>
-              </tbody>
-      
-              <thead>
-                <tr>
-                  <th scope="col">Sec 1/2</th>
-                  <th scope="col">Sec 3</th>
-                  <th scope="col">O/N level</th>
-                </tr>
-              </thead>
-      
-              <tbody>
-                <tr>
-                    <td scope="row">$160/mth</td>
-                    <td scope="row">$180/mth</td>
-                    <td scope="row">$200/mth</td>
-                </tr>
-              </tbody>
-            </table>
-          
-            <p>
-              <i> Students will be grouped into students with similar strength. 
-              </i> 
-            </p>
+          <tbody>
+            <tr>
+              <td scope="row">$160/mth</td>
+              <td scope="row">$180/mth</td>
+              <td scope="row">$200/mth</td>
+            </tr>
+          </tbody>
+        </table>
 
-        </div>
+        <p>
+          <i> Students will be grouped into students with similar strength. </i>
+        </p>
+      </div>
     </div>
 
     <div class="row text-center">
-        <div class="col">
-          <table class="table table-striped table-bordered">
-            <thead class="table-secondary">
-                <tr>
-                  <th colspan="4"><h3><b>SPECIAL-NEEDS Tuition</b></h3> <br>
-                  Please call/sms 8808-4071 for a time slot.</th>
-                </tr>
-              </thead>
+      <div class="col">
+        <table class="table table-striped table-bordered">
+          <thead class="table-secondary">
+            <tr>
+              <th colspan="4">
+                <h3><b>SPECIAL-NEEDS Tuition</b></h3>
+                <br />
+                Please call/sms 8808-4071 for a time slot.
+              </th>
+            </tr>
+          </thead>
           <thead>
             <tr>
               <th scope="col">Pri 4 (Special-needs)</th>
@@ -187,58 +203,57 @@ layout: index
 
           <tbody>
             <tr>
-                <td scope="row">$75/hour</td>
-                <td scope="row">$80/hour</td>
-                <td scope="row">$80/hour</td>
+              <td scope="row">$75/hour</td>
+              <td scope="row">$80/hour</td>
+              <td scope="row">$80/hour</td>
             </tr>
           </tbody>
         </table>
-        </div>
+      </div>
 
-        <div class="col">
+      <div class="col">
         <table class="table table-striped table-bordered">
           <thead class="table-info">
-              <tr>
-                <th colspan="4"><h3><b>★ Tertiary Education</b></h3> <br>
-                Please call/sms 8808-4071 for a time slot.</th>
-              </tr>
-            </thead>
-        <thead>
-          <tr>
-            <th scope="col">JC Chem</th>
-            <th scope="col">JC Computing</th>
-            <th scope="col">JC Econ</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td scope="row">$70/hour</td>
-            <td scope="row">$70/hour</td>
-            <td scope="row">$70/hour</td>
-          </tr>
-        </tbody>
+            <tr>
+              <th colspan="4">
+                <h3><b>★ Tertiary Education</b></h3>
+                <br />
+                Please call/sms 8808-4071 for a time slot.
+              </th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th scope="col">JC Chem</th>
+              <th scope="col">JC Computing</th>
+              <th scope="col">JC Econ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">$70/hour</td>
+              <td scope="row">$70/hour</td>
+              <td scope="row">$70/hour</td>
+            </tr>
+          </tbody>
 
-        <thead>
-          <tr>
-            <th scope="col">Ruby coding</th>
-            <th scope="col">Rails coding</th>
-            <th scope="col">Business Analytics</th>
-          </tr>
-        </thead>
+          <thead>
+            <tr>
+              <th scope="col">Ruby coding</th>
+              <th scope="col">Rails coding</th>
+              <th scope="col">Business Analytics</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr>
+          <tbody>
+            <tr>
               <td scope="row">$100/hour</td>
               <td scope="row">$100/hour</td>
               <td scope="row">$100/hour</td>
-          </tr>
-        </tbody>
-      </table>
-
-
-        </div>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
-
-
